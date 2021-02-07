@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<%- include("../navBar/navBar", {pageName: `Student's Datas`}) %>
+<body>
+    <form action="/teachers/add" method="post">
+        <div>
+            <label for="">First name</label><br>
+            <input type="text" name="first_name" id=""><br>
+        </div>
+        <br>
+        <div>
+            <label for="">last name</label><br>
+            <input type="text" name="last_name" id=""><br>
+        </div>
+        <br>
+        <div>
+            <label for="">email</label><br>
+            <input type="text" name="email" id=""><br>
+        </div>
+        <br>
+        <div>
+            <select name="gender" id=""><br>
+                <option value="male">male</option><br>
+                <option value="female">female</option><br>
+            </select>
+
+        </div>
+        <br>
+        <div>
+            <button type="submit" value="submit">submit</button>
+        </div>
+        <br>
+    </form>
+    
+</body>
+</html>

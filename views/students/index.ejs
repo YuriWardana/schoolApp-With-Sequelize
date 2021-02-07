@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<%- include("../navBar/navBar", {pageName: `Student's Datas`}) %>
+
+<body>
+  <a href="/students/add">Add student</a>
+  <table border="1">
+      <tr>
+      <th>id</th>
+      <th>first name</th>
+      <th>last name</th>
+      <th>email</th>
+      <th>gender</th>
+      <th>birth date</th>
+      <th>action</th>
+    </tr>
+    <% console.log(data) %>
+    <% data.forEach(el =>{ %>
+      <tr>
+          <td><%= el.id %></td>
+          <td><%= el.first_name %></td>
+          <td><%= el.last_name %></td>
+          <td><%= el.email %></td>
+          <td><%= el.gender %></td>
+          <td><%= el.birthdate %></td>
+          <td><a href="/students/<%= el.id%>/edit">edit</a>||<a href="/students/<%= el.id%>/delete">delete</a></td>
+  
+      <% }) %>
+
+    </tr>
+  </table>
+</body>
+</html>
